@@ -74,6 +74,31 @@ class _StatefulGroupState extends State<StatefulGroup>{
                         'http://www.devio.org/img/avatar.png',
                         width: 100,
                         height: 100,
+                      ),
+                      Image(
+                        width: 200,
+                        height: 200,
+                        image: AssetImage('images/avatar.png'),
+                      ),
+                      TextField(
+                        decoration: InputDecoration(
+                          contentPadding: EdgeInsets.fromLTRB(5, 0, 0, 0),
+                          hintText: '请输入',
+                          hintStyle: TextStyle(fontSize: 15)
+                        ),
+                      ),
+                      Container(
+                        height: 100,
+                        margin: EdgeInsets.all(10),
+                        decoration:
+                        BoxDecoration(color: Colors.lightBlueAccent),
+                        child: PageView(
+                          children: <Widget>[
+                            _item('Page1', Colors.deepPurple),
+                            _item('Page2', Colors.green),
+                            _item('Page3', Colors.red)
+                          ],
+                        ),
                       )
                     ],
                   ),
@@ -88,5 +113,15 @@ class _StatefulGroupState extends State<StatefulGroup>{
   Future<Null>__handleRefresh() async {
     await Future.delayed(Duration(milliseconds: 100));
     return null;
+  }
+  _item(String title, Color color) {
+    return Container(
+      alignment: Alignment.center,
+      decoration: BoxDecoration(color: color),
+      child: Text(
+        title,
+        style: TextStyle(fontSize: 22, color: Colors.white),
+      ),
+    );
   }
 }
