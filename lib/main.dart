@@ -1,8 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:my_flutter_app/image_page.dart';
-import 'package:my_flutter_app/animate_page.dart';
-import 'package:my_flutter_app/animation_build_page.dart';
-import 'package:my_flutter_app/hero_page.dart';
 import 'package:my_flutter_app/hero2_page.dart';
 void main() => runApp(Hero2Page());
 
